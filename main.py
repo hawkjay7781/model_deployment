@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-loaded_model = pickle.load(open('adult_randomforest_model.pkl', 'rb'))
+loaded_model = pickle.load(open('income_tree_model.pkl', 'rb'))
 
 @app.route('/')
 def home():
