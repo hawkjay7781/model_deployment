@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<html>
+<body>
+    
+<H1>Income Predictor</H1>
+
+<p>Key in the following parameters</p>
+
+<form action="/result" method="POST">
+
+    <label>Age</label>
+    <input type="text" name="age" value='30'>
+    <br>
+
+    <label>Workclass</label>
+    <select name="workclass">
+        <option value="0">Not Specified</option>
+        <option value="1">Federal Goverment</option>
+        <option value="2">Local Goverment</option>
+        <option value="3">Never Worked</option>
+        <option value="4">Private</option>
+        <option value="5">Self Employed - Income</option>
+        <option value="6">Self Employed - No Income</option>
+        <option value="7">State Government</option>
+        <option value="8">Without Pay</option>
+        
+    </select>
+    <br>
+
+    <label>Education</label>
+    <select name="education">
+        <option value="1">Preschool</option>
+        <option value="2">1st-4th</option>
+        <option value="3">5th-6th</option>
+        <option value="4">7th-8th</option>
+        <option value="5">9th</option>
+        <option value="6">10th</option>
+        <option value="7">11th</option>
+        <option value="8">12th</option>
+        <option value="9">High School Grad</option>
+        <option value="10">Some-College</option>
+        <option value="11">Associates Degree Vocational</option>
+        <option value="12">Associates Degree Academic</option>
+        <option value="13">Bachelors Degree</option>
+        <option value="14">Masters Degree</option>
+        <option value="15">Higher Professional Schooling</option>
+        <option value="16">Doctorate</option>
+    </select>
+    <br>
+
+    <label>Marital_Status</label>
+    <select name="marital">
+        <option value="1">Divorced</option>
+        <option value="2">Married AF Spouse</option>
+        <option value="3">Married CIV Spouse</option>
+        <option value="4">Married ABSENT Spouse</option>
+        <option value="5">Never Married</option>
+        <option value="6">Separated</option>
+        <option value="7">Widowed</option>
+    </select>
+    <br>
+
+    <label>Occupation</label>
+    <select name="occupation">
+        <option value="0">Not Specified</option>
+        <option value="1">Adm-clerical</option>
+        <option value="2">Armed-Forces</option>
+        <option value="3">Craft-repair</option>
+        <option value="4">Exec-managerial</option>
+        <option value="5">Farming-fishing</option>
+        <option value="6">Handlers-cleaners</option>
+        <option value="7">Machine-op-inspct</option>
+        <option value="8">Other-service</option>
+        <option value="9">Priv-house-serv</option>
+        <option value="10">Prof-specialty</option>
+        <option value="11">Protective-serv</option>
+        <option value="12">Sales</option>
+        <option value="13">Tech-support</option>
+        <option value="14">Transport-moving</option>
+    </select>
+    <br>
+
+    <label>Relationship</label>
+    <select name="relationship">
+        <option value="0">Husband</option>
+        <option value="1">Not in Family</option>
+        <option value="2">Other Relative</option>
+        <option value="3">Own Child</option>
+        <option value="4">Unmarried</option>
+        <option value="5">Wife</option>
+    </select>
+    <br>
+
+    <label>Race</label>
+    <select name="race">
+        <option value="0">American Indian Eskimo</option>
+        <option value="1">Asian / Pacific Islander</option>
+        <option value="2">Black</option>
+        <option value="3">Other</option>
+        <option value="4">White</option>
+    </select>
+    <br>
+
+    <label>Sex</label>
+    <select name="sex">
+        <option value="0">Female</option>
+        <option value="1">Male</option>
+    </select>
+    <br>
+    
+    <label>Capital_Gain</label>
+    <input type="text" name="gain" value='0'>
+    <br>
+
+    <label>Capital_Loss</label>
+    <input type="text" name="loss" value='0'>
+    <br>
+
+    <label>Country</label>
+    <select name="country">
+        <option value="0">Not Specified</option>
+        <option value="1">Cambodia</option>
+        <option value="2">Canada</option>
+        <option value="3">China</option>
+        <option value="4">Columbia</option>
+        <option value="5">Cuba</option>
+        <option value="6">Dominican Republic</option>
+        <option value="7">Ecudor</option>
+        <option value="8">El Salvador</option>
+        <option value="9">England</option>
+        <option value="10">France</option>
+        <option value="11">Germany</option>
+        <option value="12">Greece</option>
+        <option value="13">Guatemala</option>
+        <option value="14">Haiti</option>
+        <option value="15">Holand</option>
+        <option value="16">Honduras</option>
+        <option value="17">Hong Kong</option>
+        <option value="18">Hungary</option>
+        <option value="19">India</option>
+        <option value="20">Iran</option>
+        <option value="21">Ireland</option>
+        <option value="22">Italy</option>
+        <option value="23">Jamaica</option>
+        <option value="24">Japan</option>
+        <option value="25">Laos</option>
+        <option value="26">Mexico</option>
+        <option value="27">Nicaragua</option>
+        <option value="28">Outlying US</option>
+        <option value="29">Peru</option>
+        <option value="30">Phillippines</option>
+        <option value="31">Poland</option>
+        <option value="32">Portugal</option>
+        <option value="33">Puerto Rico</option>
+        <option value="34">Scotland</option>
+        <option value="35">South Korea</option>
+        <option value="36">Taiwan</option>
+        <option value="37">Thailand</option>
+        <option value="38">Trinidad & Tobago</option>
+        <option value="39">United States</option>
+        <option value="38">Vietnam</option>
+        <option value="39">Yugoslavia</option>
+    </select>
+    <br>
+    <br>
+
+    <input type="submit" value="Submit">
+
+
+</form>
+
+
+
+
+</body>
+
+
+
+
+
+</html>
